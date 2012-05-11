@@ -1,4 +1,0 @@
-iTester
-=======
-
-iTester for Android
