@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <string-array name="TestTitle">
+            <item>系统时间检查</item>
+            <item>电池信息检查</item>
+            <item>G-sensor测试</item>
+            <item>本地网络测试</item>
+            <item>SD卡读写测试</item>
+            <item>播放MP3/MP4测试</item>
+            <item>显示亮度测试</item>        
+            <item>TP画线测试</item>   
+            <item>输入字符测试</item>
+            <item>无线网络连接</item>
+            <item>震动马达测试</item>
+            <item>U盘/HDMI测试</item>
+            <item>底座HDMI/耳机测试</item>
+            <item>录音测试</item>
+            <item>LCD RGB测试</item>
+            <item>前置/后置摄像头测试</item>
+            <item>蓝牙搜索测试</item>
+            <item>内存信息检查</item>
+            <item>eMMC大小检查</item>
+            <item>无线蓝牙MAC检查</item>
+            <item>Image/MCU检查</item>
+            <item>指南针测试</item>
+            <item>休眠（S3）测试</item>
+            <item>GyroScope测试</item>
+            <item>多指侦测测试</item>
+            <item>时间设置</item>
+            <item>声音设置</item>
+            <item>3G设置</item>
+            <item>3G网站测试</item>
+        </string-array>
+		<string-array name="TestText">
+            <item>检查时间是否与当前时间一致</item>
+            <item>检查电池电量是否在70%以上</item>
+            <item>检查重力感应是否能正常旋转</item>
+            <item>测试Mini USB的USB LAN功能</item>
+            <item>测试SD卡的读写文件功能</item>
+            <item>测试机台内置喇叭，以及耳机功能是否正常</item>
+            <item>检查LCD的明暗度是否可以调节</item>        
+            <item>测试Touch Panel画线功能是否正常</item>   
+            <item>测试Touch Panel输入字符是否会串字符等</item>
+            <item>测试无线网络的功能，检查网络连线是否正常，以及信号强度是否正常</item>
+            <item>测试机台内置马达是否正常工作</item>
+            <item>测试Mini USB口能否正常读取到U盘的资料以及测试机台HDMI接口的输出功能</item>
+            <item>测试底座的HDMI及耳机接口</item>
+            <item>测试机台内置麦克风能否正常录音</item>
+            <item>测试LCD的色彩画面是否异常，以及是否有水波纹</item>
+            <item>测试机台前置/后置摄像头功能，拍照、录像</item>
+            <item>测试内置蓝牙是否能搜到周围3个以上的蓝牙设备</item>
+            <item>CPU、内存、LCD分辨率信息</item>
+            <item>eMMC容量的大小是否正确</item>
+            <item>检查无线蓝牙MAC是否异常</item>
+            <item>检查Image与MCU版本是否为最新版本</item>
+            <item>测试指北针的功能是否正常</item>
+            <item>Suspend测试，休眠时间需大于30秒以上</item>
+            <item>测试机台的陀锣仪功能是否正常(X、Y、Z三个方向)</item>
+            <item>检查机台Touch Panel是否支持多指</item>
+            <item>系统日期、时间、时区等相关设置</item>
+            <item>系统声音相关设置</item>
+            <item>设置3G相关信息</item>
+            <item>打开WAP版的百度网站</item>
+		</string-array>
+    </resources>

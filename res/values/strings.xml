@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">iTester 2</string>
+    <string name="btn_time_chk">日期时间检查</string>
+    <string name="bat_chk">电池信息检查</string>    
+    <string name="btn_draw_line">画线测试</string>    
+    <string name="btn_sd_card">SD卡读写测试</string>
+    <string name="btn_soundrecord">录音测试</string>
+    <string name="btn_camera">前后摄像头测试</string>
+    <string name="btn_input">输入字符测试</string>
+    <string name="btn_usb_to_lan">本地网络连接</string>
+    <string name="btn_wifi">无线网络连接</string>
+    <string name="btn_blue">蓝牙设置</string>
+    <string name="btn_display">显示亮度测试</string>
+    <string name="sd_title">SD卡读写测试</string>
+    <string name="btn_ifilem">播放MP3/MP4测试</string>
+    <string name="btn_lcdrgb">LCD RGB 与  跌落测试</string>
+    <string name="btn_g_sensor">G-Sensor 重力感应测试</string>
+    <string name="btn_docking">Docking 测试</string>
+    <string name="btn_u_disk">U盘/HDMI测试</string>
+    <string name="btn_compass">指南针测试</string>
+    <string name="btn_suspend">休眠(S3)测试</string>
+    <string name="btn_mem">内存信息检查</string>
+    <string name="btn_wifi_bt">无线蓝牙地址检查</string>
+    <string name="btn_emmc">eMMC大小检查</string>
+    <string name="btn_image">Image/MCU版本检查</string>
+    <string name="mem_info_title">内存容量</string>
+    <string name="btn_3g">3G测试</string>
+    <string name="rgb_chk">RGB测试</string>
+    <string name="btn_clock">设置时间</string>
+    <string name="btn_sound">声音设置</string>
+    <string name="btn_3g_setting">3G设置</string>
+    <string name="btn_vibrator">振动器(马达)测试</string>
+    <string name="now_time_title">系统当前时间</string>
+    <string name="now_time">Loading……</string>
+    <string name="mac_info">MAC地址信息</string>
+    <string name="battery_info">电池信息</string>
+    <string name="btn_sensor">多指侦测</string>
+    <string name="btn_gyro">Gyroscope 测试</string>
+    <string name="about_title">About iTester</string>
+    <string name="g_sensor">G-Sensor is Working?</string>
+    <string name="about_content">
+	本程序专为产线（T/R Line）测试使用，旨在提高测试效率，减少测试时间，为新人上手测试提供更为快捷的方式。\n
+	本程序遵循GUN/Linux GPL协议，您可以免费使用，拷贝，复制，如有修改请在遵循GPL协议的情况下公开您的代码或联系作者本人\n
+    	\n-----------------------------\n
+		Android: Android 2.2\n
+		    API: 8\n
+    	Version: 2.0.1\n
+    	Built  Date: 2011-07-22\n
+    	Update Date: 2012-04-19\n
+    	Author: Tody Kwok\n
+    	© 2012 T-ware Inc.
+    	\n-----------------------------\n
+    Changelog:\n
+    	\tv2.0.1(2012-04-19):\n
+    		\t\t1, Layout changed\n
+    		\t\t2, Main function changed\n
+    		\t\t3, Add sd.flg @ sdcard root directory if you need test sd card\n
+    		\t\t4, Fixed many bugs\n\n
+    	\tv1.6.3(2012-02-10):\n
+    		\t\t1, 更改About的布局，让历史记录可以滚动浏览\n
+    		\t\t2, 将画线（PointerLocation）程式内建至iTester中\n
+    		\t\t3, 更改程式测试顺序安装SOP步骤布局\n
+    		\t\t4, 加入判断SD插入卡后进行读写的功能\n
+    		\t\t5, 修正Bluetooth搜索不到的问题\n
+    		\t\t6, 修正了一些bug\n\n
+    	\tv1.6.2(2012-01-09):\n
+    		\t\t1, 优化程序代码，减少eMMC容量读取失败的几率\n
+    		\t\t2, 修正了一些bug\n\n
+    	\tv1.6.0(2012-01-07):\n
+    		\t\t1, 更改eMMC总容量的显示方式，读取真正eMMC容量大小\n
+    		\t\t2, 更改Image版本检查项目的顺序\n
+    		\t\t3, 调整相应中文为英文方式描述\n
+    		\t\t4, 调整在“应用管理程序”中正确显示iTester版本\n
+    		\t\t5, 移除判断Q07中，打开FileBrower的功能\n
+    </string>
+    <string name="editText1">↓↓↓㊣㊣㊣正正正</string>
+    <string name="button1">箭头朝下吗？ 正倒了吗？</string>
+</resources>

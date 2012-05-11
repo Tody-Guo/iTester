@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.example.itester"
+      android:versionCode="4"
+      android:versionName="2.0.2">
+    <uses-sdk android:minSdkVersion="8" />
+
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>	
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.BATTERY_STATS"></uses-permission>
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+
+        <activity android:name=".ITester"
+                  android:label="@string/app_name"
+                  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.catetory.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+		<activity android:name=".about"
+				  android:label="@string/about_title">
+		</activity>
+
+		<activity android:name=".timecheck"
+				  android:label="@string/now_time_title"
+				  android:theme="@android:style/Theme.Dialog"
+				  android:configChanges="orientation">
+		</activity>
+
+		<activity android:name=".sdcard"
+				  android:label="@string/sd_title"
+				  android:theme="@android:style/Theme.Dialog">
+		</activity>
+
+		<activity android:name=".meminfo"
+				  android:label="@string/mem_info_title"
+				  android:theme="@android:style/Theme.Dialog"
+				  android:configChanges="orientation">
+		</activity>
+
+		<activity android:name=".rgbchk"
+				  android:label="@string/rgb_chk"
+				  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				  android:screenOrientation="landscape">
+		</activity>
+
+		<activity android:name=".wifibtcheck"
+				  android:label="@string/mac_info"
+				  android:theme="@android:style/Theme.Dialog">
+		</activity>
+
+		<activity android:name=".batteryinfo"
+				  android:label="@string/battery_info"
+				  android:theme="@android:style/Theme.Dialog"
+				  android:configChanges="orientation">
+		</activity>
+
+		<activity android:name=".scrRotate"
+				  android:label="@string/g_sensor"
+				  android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name=".GyroTest"
+				  android:label="GyroTest"
+				  android:screenOrientation="landscape">
+		</activity>
+		
+		<activity android:name=".PointerLocation"
+                  android:label="@string/app_name"
+                  android:screenOrientation="landscape"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+		</activity>
+		
+
+    </application>
+</manifest>
