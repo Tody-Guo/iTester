@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
     <resources>
         <string-array name="TestTitle">
-            <item>系统时间检查</item>
+<!--        <item>系统时间检查</item>	-->
             <item>电池信息检查</item>
-            <item>G-sensor测试</item>
-            <item>本地网络测试</item>
+<!--        <item>G-sensor测试</item>	-->
+<!--        <item>本地网络测试</item>	-->
             <item>SD卡读写测试</item>
             <item>播放MP3/MP4测试</item>
             <item>显示亮度测试</item>        
             <item>TP画线测试</item>   
-            <item>输入字符测试</item>
+<!--        <item>输入字符测试</item>	-->
             <item>无线网络连接</item>
             <item>震动马达测试</item>
             <item>U盘/HDMI测试</item>
@@ -22,13 +22,13 @@
             <item>eMMC大小检查</item>
             <item>无线蓝牙MAC检查</item>
             <item>Image/MCU检查</item>
-            <item>指南针测试</item>
+<!--        <item>指南针测试</item>	-->
             <item>休眠（S3）测试</item>
-            <item>GyroScope测试</item>
-            <item>多指侦测测试</item>
-            <item>时间设置</item>
-            <item>声音设置</item>
-            <item>3G设置</item>
+<!--        <item>GyroScope测试</item>	 -->
+            <item>各Sensor值</item>
+<!--        <item>时间设置</item>	-->
+<!--        <item>声音设置</item>	-->
+<!--        <item>3G设置</item>		-->
             <item>3G网站测试</item>
         </string-array>
 		<string-array name="TestText">
