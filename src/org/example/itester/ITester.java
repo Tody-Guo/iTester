@@ -109,17 +109,17 @@ public class ITester extends Activity {
     {
     	switch(id)
     	{
-    		case 0:
+/*    		case 0:
     			startActivity(new Intent(this, timecheck.class));
     			Log.d(TAG, "Check Time now");
-    			break;
-    			
-    		case 1:
+    			break;*/
+		
+    		case 0:
     			Log.d(TAG, "Reading Battery information");
     			startActivity(new Intent(this, batteryinfo.class));
     		break;
     			
-    		case 2:
+/*    		case 2:
     			Log.d(TAG, "G-Sensor Test");
     			startActivity(new Intent(this, scrRotate.class));
     			break;
@@ -139,13 +139,14 @@ public class ITester extends Activity {
         			return ;
     			}
     			break;
+*/
 
-    		case 4:
+    		case 1:
     			Log.d(TAG, "SD Card Read/Wirte Test");
     			startActivity(new Intent(this, sdcard.class));
     			break;
     			
-    		case 5:
+    		case 2:
     			try{
     				Intent i = new Intent();
    					i.setClassName("com.oem.iFileManager", "com.oem.iFileManager.iFileManager");
@@ -160,38 +161,39 @@ public class ITester extends Activity {
     			}    			
     			break;
     			
-    		case 6:
+    		case 3:
     			Log.d(TAG, "Display brightness Setting");
     			startActivity(new Intent(Settings.ACTION_DISPLAY_SETTINGS));
     			break;
 
-    		case 7:
+    		case 4:
     			startActivity(new Intent(this, PointerLocation.class));
     			break;
     			
-    		case 8:
+/*    		case 5:
     			Log.d(TAG, "Input Keyboard Test");
     			Intent i= new Intent();
     			i.setClassName("com.android.quicksearchbox", "com.android.quicksearchbox.SearchActivity");
     			startActivity(i);
     			break;
+*/
     			
-    		case 9:
+    		case 5:
     			Log.d(TAG, "Wifi Test");
     			startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
 
     			break;
     			
-    		case 10:
+    		case 6:
     			Log.d(TAG, "Vibrator Test");
     			long [] pattern = {100, 400, 100, 400};    
     			Vibrator iVibrator = (Vibrator)getSystemService(VIBRATOR_SERVICE);
     	        iVibrator.vibrate(pattern, -1); 
 				break;
 
-    		case 11:
+    		case 7:
     			try{
-    				i = new Intent();		
+    				Intent i = new Intent();		
 //    				if(Build.VERSION.RELEASE.startsWith("2.3"))
 //    				{
 //    					i.setClassName("com.fb.FileBrower", "com.fb.FileBrower.FileBrower");    					
@@ -210,9 +212,9 @@ public class ITester extends Activity {
     			}
     			break;
 
-    		case 12:
+    		case 8:
     			try{
-    				i= new Intent();
+    				Intent i= new Intent();
    					i.setClassName("com.oem.iFileManager", "com.oem.iFileManager.iFileManager");
     				startActivity(i);
     			}catch(ActivityNotFoundException e)
@@ -225,10 +227,10 @@ public class ITester extends Activity {
     			}
     			break;
     			
-    		case 13:
+    		case 9:
     			Log.d(TAG, "SoundRecord Test");
     			try{
-    				i = new Intent();
+    				Intent i = new Intent();
     				i.setClassName("com.android.soundrecorder", "com.android.soundrecorder.SoundRecorder");
     				startActivity(i);
 
@@ -242,15 +244,15 @@ public class ITester extends Activity {
     			}
     			break;
 
-    		case 14:
+    		case 10:
     			Log.d(TAG, "RGB Test");
     			startActivity(new Intent(this, rgbchk.class));
     			break;
  
-    		case 15:
+    		case 11:
     			Log.d(TAG, "Camera Test");
     			try{
-    				i = new Intent();
+    				Intent i = new Intent();
    					i.setAction("android.media.action.VIDEO_CAMERA");
     		    	startActivity(i);
     			}catch(ActivityNotFoundException e)
@@ -263,7 +265,7 @@ public class ITester extends Activity {
     			}
     			break;
     			
-    		case 16: // bug fixed, cannot search Bluetooth devices...
+    		case 12: // bug fixed, cannot search Bluetooth devices...
     			Log.d(TAG, "Bluetooth Test");
     			final BluetoothAdapter bAdapt = BluetoothAdapter.getDefaultAdapter();
     			if (bAdapt == null)
@@ -273,7 +275,7 @@ public class ITester extends Activity {
     				break ; 
     			}
     			try{
-    				i = new Intent();
+    				Intent i = new Intent();
     				i.setClassName("com.android.IvtBluetooth", "com.android.IvtBluetooth.IVTBluetooth");
     				startActivity(i);
 			
@@ -289,12 +291,12 @@ public class ITester extends Activity {
     			}
     			break;
 
-    		case 17:
+    		case 13:
     			Log.d(TAG, "Memory information");
     			startActivity(new Intent(this, meminfo.class));
     			break;
 
-    		case 18:
+    		case 14:
     			Log.d(TAG, "eMMC storage information");
    		       	File path = Environment.getDataDirectory();   
    		       	StatFs stat = new StatFs(path.getPath());   
@@ -338,12 +340,12 @@ public class ITester extends Activity {
    		       			.show();
     			break;
  
-    		case 19:
+    		case 15:
     			Log.d(TAG, "Reading WiFi & Bluetooth MAC Address...");
     			startActivity(new Intent(this, wifibtcheck.class));
     		break;
     		
-    		case 20:
+    		case 16:
     		{
     			Log.d(TAG, "Image & MCU Version verification");
     		    try
@@ -373,7 +375,7 @@ public class ITester extends Activity {
     		}
     			break;
     			
-    		case 21:
+/*    		case 21:
     			try{
     				Log.d(TAG, "Compass Test");
     				i= new Intent();
@@ -390,8 +392,9 @@ public class ITester extends Activity {
     			}
 
     			break;
+*/
 
-    		case 22:
+    		case 17:
     			Log.d(TAG, "Suspend Test");
     			new AlertDialog.Builder(this)
     				.setIcon(R.drawable.icon)
@@ -401,7 +404,7 @@ public class ITester extends Activity {
     				.show();
     	        break;
 
-    		case 23:
+/*    		case 23:
     			Log.d(TAG, "Gyroscope Test");
     			try{
 //    				startActivity(new Intent(this, GyroTest.class));
@@ -422,11 +425,12 @@ public class ITester extends Activity {
         			return ;
     			}
     			break;
+*/
     			
-    		case 24:
+    		case 18:
     			Log.d(TAG, "Sensors status...");
     			try{
-    				i = new Intent();
+    				Intent i = new Intent();
     				i.setClassName("com.mtorres.phonetester", "com.mtorres.phonetester.Main");
     				startActivity(i);
     			}catch(ActivityNotFoundException e)
@@ -440,7 +444,7 @@ public class ITester extends Activity {
     			}
     			break;
  
-    		case 25:
+/*    		case 25:
     			Log.d(TAG, "Date Time setting");
     			startActivity(new Intent(Settings.ACTION_DATE_SETTINGS));
     			break;
@@ -449,8 +453,8 @@ public class ITester extends Activity {
     			Log.d(TAG, "Sound Setting");
     			startActivity(new Intent(Settings.ACTION_SOUND_SETTINGS));
     			break;
-    			
-    		case 27:
+*/    			
+/*    		case 27:
     			try{
     				Log.d(TAG, "3G Test");
     				i = new Intent();
@@ -465,8 +469,8 @@ public class ITester extends Activity {
         			return ;
     			}
     			break;
-    			
-    		case 28:
+*/   			
+    		case 19:
     			Log.d(TAG, "Open wap.baidu.com");
     			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://wap.baidu.com")));
     	}

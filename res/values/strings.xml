@@ -40,18 +40,21 @@
     <string name="about_title">About iTester</string>
     <string name="g_sensor">G-Sensor is Working?</string>
     <string name="about_content">
-	本程序专为产线（T/R Line）测试使用，旨在提高测试效率，减少测试时间，为新人上手测试提供更为快捷的方式。\n
+	本程序专为产线测试使用，旨在提高测试效率，减少测试时间，为新人上手测试提供更为快捷的方式。\n
 	本程序遵循GUN/Linux GPL协议，您可以免费使用，拷贝，复制，如有修改请在遵循GPL协议的情况下公开您的代码或联系作者本人\n
     	\n-----------------------------\n
 		Android: Android 2.2\n
 		    API: 8\n
-    	Version: 2.0.1\n
+    	Version: 2.0.3\n
     	Built  Date: 2011-07-22\n
-    	Update Date: 2012-04-19\n
+    	Update Date: 2012-05-29\n
     	Author: Tody Kwok\n
     	© 2012 T-ware Inc.
     	\n-----------------------------\n
     Changelog:\n
+    	\tv2.0.1(2012-04-19):\n
+    		\t\t1, Test Items changed for SMT\n\n
+    
     	\tv2.0.1(2012-04-19):\n
     		\t\t1, Layout changed\n
     		\t\t2, Main function changed\n
