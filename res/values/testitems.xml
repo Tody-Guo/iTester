@@ -25,7 +25,7 @@
 <!--        <item>指南针测试</item>	-->
             <item>休眠（S3）测试</item>
 <!--        <item>GyroScope测试</item>	 -->
-            <item>各Sensor值</item>
+            <item>Sensors与GPS测试</item>
 <!--        <item>时间设置</item>	-->
 <!--        <item>声音设置</item>	-->
 <!--        <item>3G设置</item>		-->

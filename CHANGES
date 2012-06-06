@@ -1,7 +1,10 @@
-v2.0.3 @ 2012-05-29
-*) update for SMT Side test
-*) remove irrelevant test items.
+v2.0.4(SMT) @ 2012-06-06
+	*) change test item name to Sensors to Sensors & GPS Test
+
+v2.0.3(SMT) @ 2012-05-29
+	*) update for SMT Side test
+	*) remove irrelevant test items.
 
 v2.0.2 @ 2012-05-02
-*) update to version 2.
-*) Added Simple Adapter
+	*) update to version 2.
+	*) Added Simple Adapter
