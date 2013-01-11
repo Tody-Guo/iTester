@@ -1,3 +1,7 @@
+v2.0.3 @ 2013-01-12
+*) add TAxCP SD card Test "external_sd" support.
+*) add N10CN ICS "sdcard2" Test
+
 v2.0.2 @ 2012-05-02
 *) update to version 2.
 *) Added Simple Adapter

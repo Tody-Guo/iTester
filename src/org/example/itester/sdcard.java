@@ -44,7 +44,16 @@ public class sdcard extends Activity {
 				break;
 			case 14:  // android 4.0
 			case 15:  // android 4.0.3
-				sdpath = "/mnt/sdcard/external_sdcard/";
+				if (fileExists("/mnt/sdcard/external_sdcard/sd.flg"))
+				{
+					sdpath = "/mnt/sdcard/external_sdcard/";
+				}else{
+					sdpath = "/mnt/sdcard2/";
+				}
+					
+				break;
+			case 16:  // android 4.0.3
+				sdpath = "/mnt/sdcard/external_sd/";
 				break;
 			default:
 				sdpath = "/mnt/sdcard/";  // default SD Path
@@ -55,7 +64,7 @@ public class sdcard extends Activity {
         
         try {
         	if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)
-        			&& fileExists(sdpath + "sd.flg")) {  
+        			&& fileExists(sdpath + "sd.flg")) {
         		File f = new File(sdpath + "sdt.txt");
 	        
         		f.createNewFile();

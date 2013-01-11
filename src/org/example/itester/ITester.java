@@ -379,16 +379,21 @@ public class ITester extends Activity {
     				i= new Intent();
     				i.setClassName("com.apksoftware.compass", "com.apksoftware.compass.Compass");
     				startActivity(i);
-    			}catch(ActivityNotFoundException e)
-    			{
-
-    				Toast.makeText(getApplicationContext(),
-        					"指北针程式打开失败",
-        					Toast.LENGTH_SHORT)
-        					.show();
-    				return ;
+    			}catch(ActivityNotFoundException e){
+    				try{
+    					/* try another COMPASS App. */
+    					i= new Intent();
+    					i.setClassName("com.netpatia.android.filteredcompass", 
+    							"com.netpatia.android.filteredcompass.FilteredCompassActivity");
+    					startActivity(i);
+    				}catch(ActivityNotFoundException e1){    					
+        				Toast.makeText(getApplicationContext(),
+            					"指北针程式打开失败",
+            					Toast.LENGTH_SHORT)
+            					.show();
+        				return ;
+    				}
     			}
-
     			break;
 
     		case 22:
