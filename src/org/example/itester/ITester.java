@@ -48,6 +48,7 @@ public class ITester extends Activity {
 	 private Float eMMC_Total;
 	 private MediaPlayer mediaplay = null;
 	 private String [] testItem = null;
+	 private int platId = 0;
 	 
 	/** Called when the activity is first created. */
     @Override
@@ -77,6 +78,9 @@ public class ITester extends Activity {
         });
         
         setContentView(listview);   /* Now showing.... */
+        
+         if (util.isRk()) 
+        	 	platId = 1;        
         
 /*        
         listview.setOnScrollListener(new OnScrollListener(){
@@ -308,27 +312,46 @@ public class ITester extends Activity {
    		       		FileReader emmc_fr = new FileReader("/proc/partitions");
    		       		BufferedReader emmc_br = new BufferedReader(emmc_fr);
    		       		String eMMC_str = emmc_br.readLine();
-   		       		eMMC_str = emmc_br.readLine();
-   		       		eMMC_str = emmc_br.readLine();  /** start at 3th line */
-   		       		eMMC_strSplit = eMMC_str.split(" ");
+   		       		switch(platId)
+   		       		{	case 0:
+   		       				eMMC_str = emmc_br.readLine();
+   		       				eMMC_str = emmc_br.readLine();  /** start at 3th line */
+   		       				eMMC_strSplit = eMMC_str.split(" ");
 
-   		       		while (eMMC_strSplit == null || 
-   		       			Integer.parseInt(eMMC_strSplit[eMMC_strSplit.length-2]) < 10000)
-   		       		{
- 	   		       		eMMC_str = emmc_br.readLine();
- 	  		       		eMMC_strSplit = eMMC_str.split(" ");
-   		       		}
+   		       				while (eMMC_strSplit == null || 
+   		       						Integer.parseInt(eMMC_strSplit[eMMC_strSplit.length-2]) < 10000)
+   		       				{
+   		       					eMMC_str = emmc_br.readLine();
+   		       					eMMC_strSplit = eMMC_str.split(" ");
+   		       				}
 
-   		       		eMMC_Total = (float) (Float.parseFloat(
-   		       				eMMC_strSplit[eMMC_strSplit.length-2]
-   		       				)/(1000*1000)*1.024*1.024*1.024);   		       			
-
-    		    }catch (FileNotFoundException e)
-    		    {
-    		    	eMMC_Total = (float)-1;
-    		    } catch (IOException e) {
-    		    	eMMC_Total = (float)-2;
-				}
+   		       				eMMC_Total = (float) (Float.parseFloat(
+   		       						eMMC_strSplit[eMMC_strSplit.length-2]
+   		       						)/(1000*1000)*1.024*1.024*1.024);
+   		       				break;
+   		       				
+   		       			case 1:
+   		       				eMMC_Total = (float) 0;
+   		       				while(eMMC_str != null)
+   		       				{
+   		       					if (eMMC_str.contains("mtdblock") && (eMMC_strSplit = eMMC_str.split(" "))!=null)
+   		       					{
+   		       						eMMC_Total = eMMC_Total + (Float.parseFloat(
+   	   		       						eMMC_strSplit[eMMC_strSplit.length-2]));
+   		      				
+   		       					}
+   		       					eMMC_str = emmc_br.readLine();
+   		       				}
+   		       				eMMC_Total = (float) (eMMC_Total/(1000*1000)*1.024*1.024*1.024);
+   		       				break;
+    		    	}
+	       		}catch (FileNotFoundException e)
+	       		{
+	       			eMMC_Total = (float)-1;
+	       		} catch (IOException e) {
+	       			eMMC_Total = (float)-2;
+	       		}
+    		    
    		       	new AlertDialog.Builder(this)
    		       		.setTitle("eMMC Storage Information")
    		       		.setMessage(String.format("全部容量: %.0f GB \n\n可用容量: %.2f GB"
@@ -409,14 +432,14 @@ public class ITester extends Activity {
     		case 23:
     			Log.d(TAG, "Gyroscope Test");
     			try{
-//    				startActivity(new Intent(this, GyroTest.class));
-    				i = new Intent();
-    				i.setComponent(new ComponentName("com.shuttle.tp.activity",
-    					"com.shuttle.tp.activity.ManualActivity"));
+    				startActivity(new Intent(this, GyroTest.class));
+//    				i = new Intent();
+//    				i.setComponent(new ComponentName("com.shuttle.tp.activity",
+//    					"com.shuttle.tp.activity.ManualActivity"));
 //    				i.putExtra("item_name","GyroTestItem"); 
 //    				i.putExtra("cycle_times", 1); 
 //    				i.putExtra("spend_time", 1);  
-    				startActivity(i);
+//    				startActivity(i);
     			}catch(ActivityNotFoundException e)
     			{
 

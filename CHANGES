@@ -1,6 +1,11 @@
+v2.0.4 @ 2013-03-05
+*) add eMMC size support for TAxCP
+*) enable internal Gyroscope test
+
 v2.0.3 @ 2013-01-12
 *) add TAxCP SD card Test "external_sd" support.
 *) add N10CN ICS "sdcard2" Test
+*) miniSDK for ICS
 
 v2.0.2 @ 2012-05-02
 *) update to version 2.

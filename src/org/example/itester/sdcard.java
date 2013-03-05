@@ -60,7 +60,7 @@ public class sdcard extends Activity {
 				break;
 		}
 		
-        Log.d("aNexter", "R/W @ \"" + sdpath + "\" @SDK: "+ Build.VERSION.SDK_INT);
+        Log.d("iTester", "R/W @ \"" + sdpath + "\" @SDK: "+ Build.VERSION.SDK_INT);
         
         try {
         	if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)
