@@ -1,5 +1,6 @@
 v2.0.6(SMT) @ 2013-07-07
-	*) fix SD Card Test function
+	*) fix SD Card Test function for android 4.2
+	*) add 3G device check function
 
 v2.0.5(SMT) @ 2013-01-09
 	*) fix SD Card Test function
