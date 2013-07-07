@@ -454,23 +454,32 @@ public class ITester extends Activity {
     			startActivity(new Intent(Settings.ACTION_SOUND_SETTINGS));
     			break;
 */    			
-/*    		case 27:
-    			try{
-    				Log.d(TAG, "3G Test");
-    				i = new Intent();
-    				i.setClassName("com.android.phone", "com.android.phone.Settings");
-    				startActivity(i);
-    			}catch(ActivityNotFoundException e)
-    			{
-    				Toast.makeText(getApplicationContext(),
-        					"3G设置打开失败",
-        					Toast.LENGTH_SHORT)
-        					.show();
-        			return ;
-    			}
-    			break;
-*/   			
     		case 19:
+    			Log.d(TAG, "3G Test for MU509");
+    			File f1 = new File("/dev/ttyUSB0");
+    			File f2 = new File("/dev/ttyUSB1");
+    			File f3 = new File("/dev/ttyUSB2");
+    			if(!f1.exists()){
+    				Toast.makeText(getApplicationContext(), "3G Device not found! -- ttyUSB0", Toast.LENGTH_LONG).show();
+    				return ;
+    			}
+    			if(!f2.exists()){
+    				Toast.makeText(getApplicationContext(), "3G Device not found! -- ttyUSB1", Toast.LENGTH_LONG).show();
+    				return ;
+    			}
+    			if(!f3.exists()){
+    				Toast.makeText(getApplicationContext(), "3G Device not found! -- ttyUSB2", Toast.LENGTH_LONG).show();
+    				return ;
+    			}
+    			
+    			new AlertDialog.Builder(this).setIcon(R.drawable.icon)
+					.setTitle("3G PASS")
+					.setMessage("Checking 3G Device ---- Pass")
+					.setPositiveButton("Ok", null).show();
+    			
+    			break;
+   			
+    		case 20:
     			Log.d(TAG, "Open wap.baidu.com");
     			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://wap.baidu.com")));
     	}

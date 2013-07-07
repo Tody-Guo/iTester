@@ -28,8 +28,8 @@
             <item>Sensors与GPS测试</item>
 <!--        <item>时间设置</item>	-->
 <!--        <item>声音设置</item>	-->
-<!--        <item>3G设置</item>		-->
-            <item>3G网站测试</item>
+	        <item>3G设备检查</item>		
+            <item>3G联网测试</item>
         </string-array>
 		<string-array name="TestText">
             <item>检查时间是否与当前时间一致</item>
@@ -59,7 +59,7 @@
             <item>检查机台Touch Panel是否支持多指</item>
             <item>系统日期、时间、时区等相关设置</item>
             <item>系统声音相关设置</item>
-            <item>设置3G相关信息</item>
+            <item>检查3G设备是否存在</item>
             <item>打开WAP版的百度网站</item>
 		</string-array>
     </resources>
